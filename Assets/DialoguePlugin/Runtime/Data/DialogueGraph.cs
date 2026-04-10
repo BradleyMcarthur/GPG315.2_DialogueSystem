@@ -7,15 +7,15 @@ using UnityEngine;
 )]
 public class DialogueGraph : ScriptableObject
 {
+    [Header("Dialogue Nodes")]
+    
     public List<DialogueNodeData> nodes =
         new List<DialogueNodeData>();
-
 
     public DialogueNodeData GetNode(string id)
     {
         return nodes.Find(node => node.nodeID == id);
     }
-
 
     public DialogueNodeData GetStartNode()
     {
