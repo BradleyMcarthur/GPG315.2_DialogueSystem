@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueGraph
   nodes:
   - nodeID: Start
-    characterID: NPC
+    characterID: elder
     dialogueText: Hello Traveler!
     choices:
     - Hi
@@ -23,12 +23,12 @@ MonoBehaviour:
     - Node2
     - Node3
   - nodeID: Node2
-    characterID: NPC
+    characterID: elder
     dialogueText: Nice to Meet You
     choices: []
     nextNodeIDs: []
   - nodeID: Node3
-    characterID: NPC
+    characterID: elder
     dialogueText: Goodbye
     choices: []
     nextNodeIDs: []
