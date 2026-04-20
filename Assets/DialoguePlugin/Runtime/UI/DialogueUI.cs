@@ -9,11 +9,9 @@ public class DialogueUI : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     public Image portraitImage;
-    
     public Button[] choiceButtons;
 
     [Header("Character Database")]
-
     public CharacterDatabase characterDatabase;
     
     public void DisplayNode(DialogueNodeData node, DialogueRunner runner)

@@ -12,10 +12,10 @@ public class DialogueRunner : MonoBehaviour
 
     void Start()
     {
-        StartDialogue(); //for testing
+        //StartDialogue(dialogueGraph); //for testing
     }
     
-    public void StartDialogue()
+    public void StartDialogue(DialogueGraph dialogueGraph)
     {
         if (dialogueGraph == null)
         {
