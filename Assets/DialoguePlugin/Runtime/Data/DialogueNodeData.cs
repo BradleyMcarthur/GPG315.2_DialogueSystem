@@ -16,4 +16,6 @@ public class DialogueNodeData
     public List<string> choices = new List<string>();
 
     public List<string> nextNodeIDs = new List<string>();
+    
+    public Vector2 position;
 }

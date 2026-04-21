@@ -22,13 +22,22 @@ MonoBehaviour:
     nextNodeIDs:
     - Node2
     - Node3
+    position: {x: 178, y: 50}
   - nodeID: Node2
     characterID: elder
     dialogueText: Nice to Meet You
     choices: []
     nextNodeIDs: []
+    position: {x: 33, y: 225}
   - nodeID: Node3
     characterID: elder
     dialogueText: Goodbye
     choices: []
     nextNodeIDs: []
+    position: {x: 309, y: 225}
+  - nodeID: 3803991c-61c3-4af3-b070-daf62e1a00c8
+    characterID: New Character
+    dialogueText: New Dialogue
+    choices: []
+    nextNodeIDs: []
+    position: {x: 648, y: 89}
