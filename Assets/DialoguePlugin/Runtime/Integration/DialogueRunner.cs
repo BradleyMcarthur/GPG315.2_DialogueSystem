@@ -1,34 +1,27 @@
 using UnityEngine;
 
+//Runtime script for swapping/displaying nodes and running through conversations. UI and trigger use it. Also has language set function
 public class DialogueRunner : MonoBehaviour
 {
     [Header("Dialogue Graph")]
-    public DialogueGraph dialogueGraph;
+    public DialogueGraph currentGraph;
+    public string currentLanguage = "EN";
     
     [Header("UI")]
     public DialogueUI dialogueUI;
     
     private DialogueNodeData currentNode;
-
-    void Start()
-    {
-        //StartDialogue(dialogueGraph); //for testing
-    }
     
-    public void StartDialogue(DialogueGraph dialogueGraph)
+    public void StartDialogue(DialogueGraph graph)
     {
-        if (dialogueGraph == null)
-        {
-            Debug.LogError("There is no DialogueGraph");
-            return;
-        }
-        currentNode = dialogueGraph.GetStartNode();
+        currentGraph = graph;
+        currentNode = graph.nodes.Find(node => node.isStartNode);
 
         if (currentNode == null)
         {
-            Debug.LogError("Couldnt find start node");
-            return;
+            currentNode = graph.nodes[0];
         }
+        
         DisplayNode();
     }
 
@@ -45,7 +38,7 @@ public class DialogueRunner : MonoBehaviour
 
         string nextID = currentNode.nextNodeIDs[index];
 
-        DialogueNodeData nextNode = dialogueGraph.GetNode(nextID);
+        DialogueNodeData nextNode = currentGraph.GetNode(nextID);
 
         if (nextNode == null)
         {
@@ -56,15 +49,23 @@ public class DialogueRunner : MonoBehaviour
         currentNode = nextNode;
         DisplayNode();
     }
+    
+    public void SetLanguage(string lang)
+    {
+        currentLanguage = lang;
 
+        // refresh current dialogue if active
+        if (currentNode != null)
+        {
+            DisplayNode();
+        }
+    }
+    
     void DisplayNode()
     {
         if (dialogueUI != null)
         {
-            dialogueUI.DisplayNode(
-                currentNode,
-                this
-            );
+            dialogueUI.DisplayNode(currentNode, this);
         }
     }
 }

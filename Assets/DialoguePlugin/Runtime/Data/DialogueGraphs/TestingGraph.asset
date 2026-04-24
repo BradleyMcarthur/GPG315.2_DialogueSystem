@@ -10,34 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3675f63bafbce964fb5d79eaeac248ed, type: 3}
-  m_Name: TestingDialogueGraph
+  m_Name: TestingGraph
   m_EditorClassIdentifier: Assembly-CSharp::DialogueGraph
   nodes:
   - nodeID: Start
     characterID: elder
-    dialogueText: Hello Traveler!
+    isStartNode: 1
+    dialogue_EN: Hello Adventurer
+    dialogue_FR: 
+    dialogue_JP: 
     choices:
-    - Hi
+    - Hi There!
     - Leave
     nextNodeIDs:
     - Node2
     - Node3
-    position: {x: 178, y: 50}
+    position: {x: -170, y: 64.99997}
   - nodeID: Node2
     characterID: elder
-    dialogueText: Nice to Meet You
+    isStartNode: 0
+    dialogue_EN: Nice to Meet you
+    dialogue_FR: 
+    dialogue_JP: 
     choices: []
     nextNodeIDs: []
-    position: {x: 33, y: 225}
+    position: {x: 219.00012, y: -125.999664}
   - nodeID: Node3
     characterID: elder
-    dialogueText: Goodbye
+    isStartNode: 0
+    dialogue_EN: See you later!
+    dialogue_FR: 
+    dialogue_JP: 
     choices: []
     nextNodeIDs: []
-    position: {x: 309, y: 225}
-  - nodeID: 3803991c-61c3-4af3-b070-daf62e1a00c8
-    characterID: New Character
-    dialogueText: New Dialogue
-    choices: []
-    nextNodeIDs: []
-    position: {x: 648, y: 89}
+    position: {x: 216.00049, y: 152.00192}

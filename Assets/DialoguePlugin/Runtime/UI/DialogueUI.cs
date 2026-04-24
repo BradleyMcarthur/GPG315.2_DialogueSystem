@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,13 +8,15 @@ public class DialogueUI : MonoBehaviour
     [Header("UI Elements")]
     public TextMeshProUGUI characterNameText;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI currentLanguageText;
 
     public Image portraitImage;
     public Button[] choiceButtons;
 
     [Header("Character Database")]
     public CharacterDatabase characterDatabase;
-    
+
+    //Runner displays each node to the Ui for player to read and interact with
     public void DisplayNode(DialogueNodeData node, DialogueRunner runner)
     {
         if (node == null)
@@ -32,10 +35,11 @@ public class DialogueUI : MonoBehaviour
         {
             characterNameText.text = node.characterID;
         }
+        
+        dialogueText.text = node.GetText(runner.currentLanguage);
+        currentLanguageText.text = runner.currentLanguage;
 
-        dialogueText.text = node.dialogueText;
-
-        //setup buttons
+        //setup buttons and only display needed ones (eg. 2 response choices = 2 buttons)
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             if (i < node.choices.Count)

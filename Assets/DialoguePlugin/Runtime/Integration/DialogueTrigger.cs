@@ -12,7 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     [Header("Trigger Settings")]
 
     public bool triggerOnEnter = true;
-    public bool requireKeyPress = false;
+    public bool requireKeyPress = false; //this gives choice between triggering dialogue immediately on approach or upon player input
     public KeyCode interactionKey = KeyCode.E;
     
     private bool playerInRange = false;
