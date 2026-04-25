@@ -17,30 +17,56 @@ MonoBehaviour:
     characterID: elder
     isStartNode: 1
     dialogue_EN: Hello Adventurer
-    dialogue_FR: 
-    dialogue_JP: 
+    dialogue_FR: Bonjour aventurier
+    dialogue_JP: "Kon'nichiwa b\u014Dken-sha"
     choices:
     - Hi There!
     - Leave
     nextNodeIDs:
     - Node2
-    - Node3
-    position: {x: -170, y: 64.99997}
+    - Goodbye
+    position: {x: -164, y: 111.99997}
   - nodeID: Node2
     characterID: elder
     isStartNode: 0
     dialogue_EN: Nice to Meet you
     dialogue_FR: 
     dialogue_JP: 
-    choices: []
-    nextNodeIDs: []
-    position: {x: 219.00012, y: -125.999664}
-  - nodeID: Node3
+    choices:
+    - Are you ok?
+    - See ya
+    nextNodeIDs:
+    - GiveQuest
+    - Goodbye
+    position: {x: 217.00012, y: -108.999664}
+  - nodeID: Goodbye
     characterID: elder
     isStartNode: 0
-    dialogue_EN: See you later!
+    dialogue_EN: Goodbye
     dialogue_FR: 
     dialogue_JP: 
     choices: []
     nextNodeIDs: []
-    position: {x: 216.00049, y: 152.00192}
+    position: {x: 970.0005, y: 160.00192}
+  - nodeID: GiveQuest
+    characterID: elder
+    isStartNode: 0
+    dialogue_EN: No my pet goat has wandered into the woods, please fetch her!
+    dialogue_FR: 
+    dialogue_JP: 
+    choices:
+    - Ill find her!
+    - Good luck
+    nextNodeIDs:
+    - AcceptQuest
+    - Goodbye
+    position: {x: 555, y: -124}
+  - nodeID: AcceptQuest
+    characterID: elder
+    isStartNode: 0
+    dialogue_EN: Thankyou so much, Please hurry!
+    dialogue_FR: 
+    dialogue_JP: 
+    choices: []
+    nextNodeIDs: []
+    position: {x: 975, y: -124}
