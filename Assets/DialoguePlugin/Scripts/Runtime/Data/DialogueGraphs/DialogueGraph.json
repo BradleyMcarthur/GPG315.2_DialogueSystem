@@ -1,0 +1,52 @@
+{
+    "nodes": [
+        {
+            "nodeID": "Start",
+            "characterID": "Guard",
+            "isStartNode": true,
+            "dialogue_EN": "Greetings",
+            "dialogue_FR": "",
+            "dialogue_JP": "",
+            "choices": [
+                "Hello",
+                "Goodbye"
+            ],
+            "nextNodeIDs": [
+                "Arrow to the knee",
+                "Goodbye"
+            ],
+            "position": {
+                "x": -191.0,
+                "y": 6.0
+            }
+        },
+        {
+            "nodeID": "Goodbye",
+            "characterID": "guard",
+            "isStartNode": false,
+            "dialogue_EN": "See ya",
+            "dialogue_FR": "",
+            "dialogue_JP": "",
+            "choices": [],
+            "nextNodeIDs": [],
+            "position": {
+                "x": 349.0,
+                "y": 180.0
+            }
+        },
+        {
+            "nodeID": "Arrow to the knee",
+            "characterID": "guard",
+            "isStartNode": false,
+            "dialogue_EN": "I was once an adventurer",
+            "dialogue_FR": "",
+            "dialogue_JP": "",
+            "choices": [],
+            "nextNodeIDs": [],
+            "position": {
+                "x": 225.0,
+                "y": -113.0
+            }
+        }
+    ]
+}

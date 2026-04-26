@@ -25,7 +25,7 @@ MonoBehaviour:
     nextNodeIDs:
     - Node2
     - Goodbye
-    position: {x: -164, y: 111.99997}
+    position: {x: -186, y: 95.99997}
   - nodeID: Node2
     characterID: elder
     isStartNode: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     nextNodeIDs:
     - GiveQuest
     - Goodbye
-    position: {x: 217.00012, y: -108.999664}
+    position: {x: 135.00012, y: -118.999664}
   - nodeID: Goodbye
     characterID: elder
     isStartNode: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     dialogue_JP: 
     choices: []
     nextNodeIDs: []
-    position: {x: 970.0005, y: 160.00192}
+    position: {x: 705.0005, y: 197.00192}
   - nodeID: GiveQuest
     characterID: elder
     isStartNode: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     nextNodeIDs:
     - AcceptQuest
     - Goodbye
-    position: {x: 555, y: -124}
+    position: {x: 436, y: -123}
   - nodeID: AcceptQuest
     characterID: elder
     isStartNode: 0
@@ -69,4 +69,4 @@ MonoBehaviour:
     dialogue_JP: 
     choices: []
     nextNodeIDs: []
-    position: {x: 975, y: -124}
+    position: {x: 777, y: -130}

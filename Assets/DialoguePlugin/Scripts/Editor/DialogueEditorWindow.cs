@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEditor;
-using UnityEditor.Graphs.AnimationBlendTree;
 
 public class DialogueEditorWindow : EditorWindow
 {
@@ -168,7 +166,7 @@ public class DialogueEditorWindow : EditorWindow
         switch (e.type)
         {
             case EventType.MouseDrag:
-                if (e.button == 2) // Middle mouse
+                if (e.button == 2) // middle mouse button
                 {
                     OnDrag(e.delta);
                 }
@@ -316,8 +314,7 @@ public class DialogueEditorWindow : EditorWindow
                 {
                     Vector2 endPos = target.position + panOffset + new Vector2(0, 90);
 
-                    Handles.DrawBezier(startPos, endPos, startPos + Vector2.right * 50, endPos + Vector2.left * 50, Color.white, null, 2f
-                    );
+                    Handles.DrawBezier(startPos, endPos, startPos + Vector2.right * 50, endPos + Vector2.left * 50, Color.white, null, 2f);
                 }
             }
         }
